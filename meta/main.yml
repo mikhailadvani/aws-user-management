@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Mikhail Advani
+
+  license: Apache
+
+  min_ansible_version: 2.5
+
+  galaxy_tags:
+    - cloud
+    - aws
+    - iam
+    - user
+    - group
+
+dependencies: []

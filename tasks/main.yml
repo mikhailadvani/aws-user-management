@@ -1,0 +1,18 @@
+---
+# tasks file for aws-user-management
+
+- name: Create users
+  iam_user:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ iam_users }}"
+
+- name: Create groups
+  iam_group:
+    name: "{{ item.name }}"
+    state: present
+    managed_policy: "{{ item.policies }}"
+    purge_users: yes
+    purge_policy: yes
+    users: "{{ item.users }}"
+  with_items: "{{ iam_groups }}"

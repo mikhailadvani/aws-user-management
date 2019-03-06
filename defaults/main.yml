@@ -1,0 +1,5 @@
+---
+# defaults file for aws-user-management
+
+iam_users: []
+iam_groups: []
